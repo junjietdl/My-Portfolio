@@ -95,10 +95,12 @@ nav ul li a:hover::after {
 
 .banner h3 {
   font-size: 25px;
+  padding: 10px;
 }
 
 .banner p {
   padding: 15px;
+  font-size: 25px;
 }
 
 .banner img {
