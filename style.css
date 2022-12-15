@@ -259,7 +259,7 @@ nav ul li a:hover::after {
 
 .tab-links {
   margin-right: 50px;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -282,12 +282,20 @@ nav ul li a:hover::after {
 
 .tab-contents ul li {
   list-style: none;
+  font-size: 20px;
   margin: 10px 0;
 }
 
 .tab-contents ul li span {
   color: #b54769;
-  font-size: 14px;
+  font-size: 20px;
+}
+
+.description {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 10px 0;
 }
 
 .tab-contents {
