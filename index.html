@@ -21,7 +21,7 @@
       <ul id="sidemenu">
         <li><a href="#header">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">My Projects</a></li>
+        <li><a href="#portfolio">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
       </ul>
@@ -44,7 +44,8 @@
     <span class="m">A</span>
     <span class="m">C</span>
     <span class="m">K</span>
-    <span class="m">&nbsp;</span>
+    <br class="hidden">
+    <span class="m space">&nbsp;</span>
     <span class="m">D</span>
     <span class="m">E</span>
     <span class="m">V</span>
@@ -61,7 +62,7 @@
 </div>
 
 <!-- about section -->
-<div id="about">
+<div class="about" id="about">
   <div class="container">
     <div class="row">
       <div class="about-col-1">
@@ -69,7 +70,10 @@
       </div>
       <div class="about-col-2">
         <h1 class="sub-title">About me</h1>
-        <p class="description">Hi, I am Jun Jie. I am an aspiring full stack developer. Currently, looking for an entry level web developer opportunities. I spend my time on personal projects and learning more about HTML, CSS and JavaScript. If you have an idea for a website or want to upgrade your current website contact me and we can discuss your options.</p>
+        <div>
+          <p class="description">Hi, I am Jun Jie. I am an aspiring full stack developer. Currently, looking for an entry level web developer opportunities. I spend my time on personal projects and learning more about HTML, CSS and JavaScript. If you have an idea for a website or want to upgrade your current website contact me and we can discuss your options.</p>
+
+        </div>
 
         <div class="tab-titles">
           <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -77,46 +81,48 @@
         </div>
         <!-- Skills -->
         <div class="tab-contents active-tab" id="skills">
-          <div class="progress-container">
-            <div><h3 class="skill-title">Ruby, on Rails</h3></div>
-            <div class="progress">
-              <div class="progress__fill" style="width: 80%;"></div>
-                <span class="progress__text">80%</span>
+          <div class="skills-container">
+            <div class="progress-container">
+              <div><h3 class="skill-title">Ruby, on Rails</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 80%;"></div>
+                  <span class="progress__text">80%</span>
+              </div>
             </div>
-          </div>
-          <div class="progress-container">
-            <div><h3 class="skill-title">HTML / CSS / JavaScript</h3></div>
-            <div class="progress">
-              <div class="progress__fill" style="width: 70%;"></div>
-                <span class="progress__text">70%</span>
+            <div class="progress-container">
+              <div><h3 class="skill-title">HTML / CSS / JavaScript</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 70%;"></div>
+                  <span class="progress__text">70%</span>
+              </div>
             </div>
-          </div>
-          <div class="progress-container">
-            <div><h3 class="skill-title">Figma</h3></div>
-            <div class="progress">
-              <div class="progress__fill" style="width: 65%;"></div>
-                <span class="progress__text">65%</span>
+            <div class="progress-container">
+              <div><h3 class="skill-title">Figma</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 65%;"></div>
+                  <span class="progress__text">65%</span>
+              </div>
             </div>
-          </div>
-          <div class="progress-container">
-            <div><h3 class="skill-title">Heroku</h3></div>
-            <div class="progress">
-              <div class="progress__fill" style="width: 70%;"></div>
-                <span class="progress__text">70%</span>
+            <div class="progress-container">
+              <div><h3 class="skill-title">Heroku</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 70%;"></div>
+                  <span class="progress__text">70%</span>
+              </div>
             </div>
-          </div>
-          <div class="progress-container">
-            <div><h3 class="skill-title">Pyhton / Numpy / Pandas</h3></div>
-            <div class="progress">
-              <div class="progress__fill" style="width: 55%;"></div>
-                <span class="progress__text">55%</span>
+            <div class="progress-container">
+              <div><h3 class="skill-title">Pyhton / Numpy / Pandas</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 55%;"></div>
+                  <span class="progress__text">55%</span>
+              </div>
             </div>
-          </div>
-          <div class="progress-container">
-            <div><h3 class="skill-title">React</h3></div>
-            <div class="progress">
-              <div class="progress__fill" style="width: 5%;"></div>
-                <span class="progress__text">5%</span>
+            <div class="progress-container">
+              <div><h3 class="skill-title">React</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 5%;"></div>
+                  <span class="progress__text">5%</span>
+              </div>
             </div>
           </div>
 
@@ -140,7 +146,7 @@
 </div>
 
 <!-- Portfolio -->
-<div id="portfolio">
+<div class="projects" id="portfolio">
   <div class="container">
     <h1 class="sub-title">My Projects</h1>
     <div class="worklist">
