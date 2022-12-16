@@ -1,0 +1,27 @@
+@import url('components/about_page.css');
+
+@import url('components/banner.css');
+@import url('components/contact.css');
+@import url('components/nav.css');
+@import url('components/portfolio.css');
+@import url('components/progress_bar.css');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'san-serif';
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #131318;
+  color: #fff;
+}
+
+.container {
+  padding: 10px 10%;
+}

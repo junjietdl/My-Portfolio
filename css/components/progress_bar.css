@@ -1,0 +1,35 @@
+/* Skill progress */
+
+.progress {
+  position: relative;
+  width: 50%;
+  height: 1rem;
+  background-color: #ccc;
+  border-radius: 5px;
+  max-width: calc(100% - 20px);
+  overflow: hidden;
+}
+
+.skill-title {
+  padding: 5px 0;
+}
+
+.progress__fill {
+  width: 0%;
+  height: 100%;
+  background-color: greenyellow;
+  transition: all .5s;
+}
+
+.progress__text {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  font: bold 14px 'Quicksand', sans-serif;
+  color: #fff;
+}
+
+.progress-container {
+  padding: 10px;
+}
