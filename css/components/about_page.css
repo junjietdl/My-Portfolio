@@ -30,6 +30,16 @@
   color: #fff;
 }
 
+.tabcontent li {
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.tabcontent li span{
+  color: #ff004f;
+}
+
 /* css for small screen */
 
 @media(max-width: 714px) {

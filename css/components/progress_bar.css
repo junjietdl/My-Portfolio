@@ -2,11 +2,11 @@
 
 .progress {
   position: relative;
-  width: 100%;
+  width: 40rem;
   height: 1rem;
   background-color: #ccc;
   border-radius: 5px;
-  max-width: calc(100% - 20px);
+  max-width: calc(100% - 40px);
   overflow: hidden;
 }
 
@@ -24,12 +24,47 @@
 .progress__text {
   position: absolute;
   top: 50%;
-  right: 5px;
+  right: 45%;
   transform: translateY(-50%);
   font: bold 14px 'Quicksand', sans-serif;
-  color: #fff;
+  color: black;
 }
 
 .progress-container {
   padding: 10px;
+}
+
+.progress-container img {
+  width: 100px;
+  height: 100%;
+}
+
+@media(max-width: 1270px) {
+  .progress {
+    width: 30rem;
+  }
+}
+
+@media(max-width: 937px) {
+  .progress {
+    width: 20rem;
+  }
+}
+
+@media(max-width: 714px) {
+  .progress {
+    width: 35rem;
+  }
+}
+
+@media(max-width: 661px) {
+  .progress {
+    width: 25rem;
+  }
+}
+
+@media(max-width: 462px) {
+  .progress {
+    width: 20rem;
+  }
 }
