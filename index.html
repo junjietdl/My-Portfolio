@@ -69,7 +69,7 @@
       </div>
       <div class="about-col-2">
         <h1 class="sub-title">About me</h1>
-        <p class="description">Hi, I am Jun Jie. I am an aspiring full stack developer. Currently, looking for an entry level web developer opportunities. I spend my time on personal projects and learning more about HTML, CSS and JavaScript. I am interested in remote work as well as freelance work. If you have an idea for a website or want to upgrade your current website contact  me and we can discuss your options</p>
+        <p class="description">Hi, I am Jun Jie. I am an aspiring full stack developer. Currently, looking for an entry level web developer opportunities. I spend my time on personal projects and learning more about HTML, CSS and JavaScript. If you have an idea for a website or want to upgrade your current website contact me and we can discuss your options.</p>
 
         <div class="tab-titles">
           <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -77,14 +77,49 @@
         </div>
         <!-- Skills -->
         <div class="tab-contents active-tab" id="skills">
-          <ul>
-            <li class="tabs-skills">Ruby, on Rails<br></li>
-            <li class="tabs-skills">HTML5, CSS, JavaScript<br></li>
-            <li class="tabs-skills">Heroku<br></li>
-            <li class="tabs-skills">Python, Numpy, Pandas<br></li>
-            <li class="tabs-skills">SQL<br></li>
-            <li class="tabs-skills">Bootstrap<br></li>
-          </ul>
+          <div class="progress-container">
+            <div><h3 class="skill-title">Ruby, on Rails</h3></div>
+            <div class="progress">
+              <div class="progress__fill" style="width: 80%;"></div>
+                <span class="progress__text">80%</span>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div><h3 class="skill-title">HTML / CSS / JavaScript</h3></div>
+            <div class="progress">
+              <div class="progress__fill" style="width: 70%;"></div>
+                <span class="progress__text">70%</span>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div><h3 class="skill-title">Figma</h3></div>
+            <div class="progress">
+              <div class="progress__fill" style="width: 65%;"></div>
+                <span class="progress__text">65%</span>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div><h3 class="skill-title">Heroku</h3></div>
+            <div class="progress">
+              <div class="progress__fill" style="width: 70%;"></div>
+                <span class="progress__text">70%</span>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div><h3 class="skill-title">Pyhton / Numpy / Pandas</h3></div>
+            <div class="progress">
+              <div class="progress__fill" style="width: 55%;"></div>
+                <span class="progress__text">55%</span>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div><h3 class="skill-title">React</h3></div>
+            <div class="progress">
+              <div class="progress__fill" style="width: 5%;"></div>
+                <span class="progress__text">5%</span>
+            </div>
+          </div>
+
         </div>
         <!-- Experience -->
 
@@ -125,6 +160,21 @@
           <a href="https://www.kidstrotter.tech/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
+    </div>
+    <div class="toast">
+
+      <div class="toast-content">
+        <i class="fas fa-solid fa-check check"></i>
+
+        <div class="message">
+          <span class="text text-1">Success</span>
+          <span class="text text-2">Your changes has been saved</span>
+        </div>
+      </div>
+      <i class="fa-solid fa-xmark close"></i>
+
+      <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+      <div class="progress active"></div>
     </div>
     <a href="#" class="btn">See more</a>
   </div>
@@ -188,5 +238,12 @@
   });
 </script>
 
+<script>
+  const updateProgressBar = (progressBar, value) => {
+    value = Math.round(value);
+    progressBar.querySelector(".progress__fill").style.width = `${value}%`;
+    progressBar.querySelector(".progress__text").textContent = `${value}%`;
+  }
+</script>
 </body>
 </html>
