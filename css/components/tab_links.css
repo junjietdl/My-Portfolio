@@ -1,0 +1,47 @@
+.hero {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.tab {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tab .fa-solid {
+  margin-right: 20px;
+}
+
+.tab button:hover .fa-solid{
+  color: #ff7846;
+}
+
+.tabcontent {
+  position: absolute;
+  transform: translateX(1000%);
+  transition: .5s;
+
+}
+
+.tabcontent p {
+  color: #fff;
+}
+
+#btn-skills {
+  color: #ff7846;
+}

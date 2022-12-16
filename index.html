@@ -71,82 +71,71 @@
       <div class="about-col-2">
         <h1 class="sub-title">About me</h1>
         <p class="description">Hi, I am Jun Jie. I am an aspiring full stack developer. Currently, I am looking for an entry level web developer opportunities. I spend most of my time on personal projects and learn more about HTML, CSS and JavaScript. If you have an idea for a website or want to upgrade your current website contact me and we can discuss your options.</p>
-        <div class="tab-titles">
-          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-          <p class="tab-links" onclick="opentab('education')">Education</p>
-          <!-- Skills -->
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li>
-                <div class="progress-container">
-                  <div><h3 class="skill-title">Ruby, on Rails</h3></div>
-                  <div class="progress">
-                    <div class="progress__fill" style="width: 80%;"></div>
-                      <span class="progress__text">80%</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-container">
-                  <div><h3 class="skill-title">HTML / CSS / JavaScript</h3></div>
-                  <div class="progress">
-                    <div class="progress__fill" style="width: 70%;"></div>
-                      <span class="progress__text">70%</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-container">
-                  <div><h3 class="skill-title">Figma</h3></div>
-                  <div class="progress">
-                    <div class="progress__fill" style="width: 65%;"></div>
-                      <span class="progress__text">65%</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-container">
-                  <div><h3 class="skill-title">Heroku</h3></div>
-                  <div class="progress">
-                    <div class="progress__fill" style="width: 70%;"></div>
-                      <span class="progress__text">70%</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-container">
-                  <div><h3 class="skill-title">Pyhton / Numpy / Pandas</h3></div>
-                  <div class="progress">
-                    <div class="progress__fill" style="width: 55%;"></div>
-                      <span class="progress__text">55%</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-container">
-                  <div><h3 class="skill-title">React</h3></div>
-                  <div class="progress">
-                    <div class="progress__fill" style="width: 5%;"></div>
-                      <span class="progress__text">5%</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
+        <div class="hero">
+          <div class="tab">
+            <button id="btn-skills" onclick="openSkills()"><i class="fa-solid fa-screwdriver-wrench"></i>Skills</button>
+            <button id="btn-educations" onclick="openEducations()"><i class="fa-solid fa-book"></i>Educations</button>
           </div>
-          <!-- Experience -->
+          <div id="skill-contents" class="tabcontent">
+            <!-- Ruby, on Rails -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Ruby, on Rails</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 80%;"></div>
+                  <span class="progress__text">80%</span>
+              </div>
+            </div>
+            <!-- HTML/CSS/JS -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">HTML / CSS / JavaScript</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 70%;"></div>
+                  <span class="progress__text">70%</span>
+              </div>
+            </div>
+            <!-- Figma -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Figma</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 65%;"></div>
+                  <span class="progress__text">65%</span>
+              </div>
+            </div>
+            <!-- Heroku -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Heroku</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 70%;"></div>
+                  <span class="progress__text">70%</span>
+              </div>
+            </div>
+            <!-- Python -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Python / Numpy / Pandas</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 55%;"></div>
+                  <span class="progress__text">55%</span>
+              </div>
+            </div>
+            <!-- React -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">React</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 5%;"></div>
+                  <span class="progress__text">5%</span>
+              </div>
+            </div>
 
-          <!-- Education -->
-          <div class="tab-contents" id="education">
+          </div>
+          <div id="education-contents" class="tabcontent">
             <ul>
               <li><span>Oct 2022 - Dec 2022</span><br>Web Development at Le Wagon Singapore</li>
-
               <li><span>2019 - 2021</span><br>Naval Architecture at NewCastle University</li>
-
               <li><span>2014 - 2016</span><br>Diploma in Marine & Offshore</li>
             </ul>
           </div>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -211,6 +200,30 @@
   </div>
 </div>
 
+<script>
+var content1 = document.getElementById("skill-contents");
+var content2 = document.getElementById("education-contents");
+var btn1 = document.getElementById("btn-skills");
+var btn2 = document.getElementById("btn-educations");
+
+function openSkills(){
+  content1.style.transform = "translateX(0px)";
+  content2.style.transform = "translateX(1000%)";
+  btn1.style.color = "#ff7846";
+  btn2.style.color = "#fff";
+  content1.style.transitionDelay = ".3s"
+  content2.style.transitionDelay = "0s"
+}
+
+function openEducations(){
+  content1.style.transform = "translateX(1000%)";
+  content2.style.transform = "translateX(0px)";
+  btn1.style.color = "#fff";
+  btn2.style.color = "#ff7846";
+  content1.style.transitionDelay = "0s"
+  content2.style.transitionDelay = ".3s"
+}
+</script>
 
 <script src="/js/tablinks.js"></script>
 
@@ -244,5 +257,6 @@
     progressBar.querySelector(".progress__text").textContent = `${value}%`;
   }
 </script>
+
 </body>
 </html>
