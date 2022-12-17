@@ -8,41 +8,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/0c5192ab69.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
   <link rel="shortcut icon" href="/images/icons8-j-67.png">
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg fixed-top" id="nav">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar scroll</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" id="sidemenu">
-        <li class="nav-item">
-          <a class="nav-link" href="#header">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">My Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
+<header class="header-style">
+  <nav class="navbar">
+    <div>
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
       </ul>
       <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
+
 
 <div class="banner" id="header">
   <img src="/images/male avatar.png" alt="">
@@ -57,7 +44,8 @@
     <span class="m">A</span>
     <span class="m">C</span>
     <span class="m">K</span>
-    <span class="m">&nbsp;</span>
+    <br class="hidden">
+    <span class="m space">&nbsp;</span>
     <span class="m">D</span>
     <span class="m">E</span>
     <span class="m">V</span>
@@ -74,7 +62,7 @@
 </div>
 
 <!-- about section -->
-<div id="about">
+<div class="about" id="about">
   <div class="container">
     <div class="row">
       <div class="about-col-1">
@@ -82,40 +70,131 @@
       </div>
       <div class="about-col-2">
         <h1 class="sub-title">About me</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id enim, doloribus vitae suscipit totam eos fugiat cupiditate! Ratione, ex. Earum, at expedita! Eaque nam voluptas pariatur, expedita omnis recusandae nisi?</p>
+        <p class="description">Hi, I am Jun Jie. I am an aspiring full stack developer. Currently, I am looking for an entry level web developer opportunities. I spend most of my time on personal projects and learn more about HTML, CSS and JavaScript. If you have an idea for a website or want to upgrade your current website contact me and we can discuss your options.</p>
+        <div class="hero">
+          <div class="tab">
+            <button id="btn-skills" onclick="openSkills()"><i class="fa-solid fa-screwdriver-wrench"></i>Skills</button>
+            <button id="btn-educations" onclick="openEducations()"><i class="fa-solid fa-book"></i>Educations</button>
+          </div>
+          <!-- Skills -->
+          <div id="skill-contents" class="tabcontent">
+            <!-- Ruby, on Rails -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Ruby on Rails</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 80%;"></div>
+                <span class="progress__text">80%</span>
+              </div>
+            </div>
+            <!-- Ruby -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Ruby</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 80%;"></div>
+                <span class="progress__text">80%</span>
+              </div>
+            </div>
+            <!-- HTML -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">HTML</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 70%;"></div>
+                  <span class="progress__text">70%</span>
+              </div>
+            </div>
+            <!-- Figma -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Figma</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 65%;"></div>
+                  <span class="progress__text">65%</span>
+              </div>
+            </div>
+            <!-- Heroku -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Heroku</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 70%;"></div>
+                  <span class="progress__text">70%</span>
+              </div>
+            </div>
+            <!-- Python -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Python / Numpy / Pandas</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 55%;"></div>
+                  <span class="progress__text">55%</span>
+              </div>
+            </div>
+            <!-- SQL -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">SQL</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 55%;"></div>
+                  <span class="progress__text">75%</span>
+              </div>
+            </div>
+            <!-- Git -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Git</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 55%;"></div>
+                  <span class="progress__text">80%</span>
+              </div>
+            </div>
+            <!-- GitHub -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">GitHub</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 90%;"></div>
+                  <span class="progress__text">90%</span>
+              </div>
+            </div>
+            <!-- Python -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">Python / Numpy / Pandas</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 55%;"></div>
+                  <span class="progress__text">55%</span>
+              </div>
+            </div>
+            <!-- React -->
+            <div class="progress-container">
+              <div><h3 class="skill-title">React</h3></div>
+              <div class="progress">
+                <div class="progress__fill" style="width: 5%;"></div>
+                  <span class="progress__text">5%</span>
+              </div>
+            </div>
 
-        <div class="tab-titles">
-          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-          <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <!-- Education -->
+          <div id="education-contents" class="tabcontent">
+            <ul>
+              <li>
+                <h2>Le Wagon</h2>
+                <p class="ed-title"><em>Full Stack Web Development</em><br><span>Oct 2022 - Dec 2022</span></p>
+                <p>9 week full-time intensive Web development bootcamp that was completed locally in Singapore. During the 9 weeks bootcamp, there was a strong focus on pair programming and agile methodologies. I have built applications using  while following Test Driven Development and SOLID design principles. My team and I completed a web application for our final project as well as a clone of G2G website using Ruby on Rails, JavaScript, HTML & CSS, APIs, Github, and Heroku within 2 weeks.</p>
+              </li>
+              <li>
+                <h2>NewCastle University</h2>
+                <p class="ed-title"><em>BEng in Naval Architecture</em><br><span>2019 - 2021</span></p>
+                <p>3 years joint Degree programme in Naval Architecture that was completed locally in Singapore. Worked in Sembcorp Marine as a Reseach & Development assistance for over 6 months during the course of my studies, where I lead a development of additive manufacturing technology integration into the company. </p>
+              </li>
+            </ul>
+          </div>
+          </div>
         </div>
-        <!-- Skills -->
-        <div class="tab-contents active-tab" id="skills">
-          <ul>
-            <li><span>UI?UX</span><br>Designing Web interfaces</li>
-            <li><span>UI?UX</span><br>Designing Web interfaces</li>
-            <li><span>UI?UX</span><br>Designing Web interfaces</li>
-          </ul>
-        </div>
-        <!-- Experience -->
-
-        <!-- Education -->
-        <div class="tab-contents" id="education">
-          <ul>
-            <li><span>Oct 2022 - Dec 2022</span><br>Web Development at Le Wagon Singapore</li>
-
-            <li><span>2019 - 2021</span><br>Naval Architecture at NewCastle University</li>
-          </ul>
-        </div>
-
       </div>
     </div>
   </div>
 </div>
 
+
 <!-- Portfolio -->
-<div id="portfolio">
+<div class="projects" id="portfolio">
   <div class="container">
-    <h1 class="sub-title">My Works</h1>
+    <h1 class="sub-title">My Projects</h1>
     <div class="worklist">
       <div class="work">
         <img src="/images/Prymart.png" alt="prymart">
@@ -147,12 +226,12 @@
         <p><i class="fa-solid fa-paper-plane"></i>junjietdl@gmail.com</p>
         <p><i class="fa-solid fa-square-phone"></i>+65 92200811</p>
         <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.facebook.com/jun.dreamdream" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/junjietdl/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://github.com/junjietdl" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/jun-jie-teo-797260196/" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
-        <a href="images/TESTESTTES.pdf" download class="btn btn2">Download CV</a>
+        <a href="images/Jun Jie Teo Resume.pdf" download class="btn btn2">Download CV</a>
       </div>
       <div class="contact-right">
         <form name="submit-to-google-sheet">
@@ -170,6 +249,30 @@
   </div>
 </div>
 
+<script>
+var content1 = document.getElementById("skill-contents");
+var content2 = document.getElementById("education-contents");
+var btn1 = document.getElementById("btn-skills");
+var btn2 = document.getElementById("btn-educations");
+
+function openSkills(){
+  content1.style.transform = "translateX(0px)";
+  content2.style.transform = "translateX(1000%)";
+  btn1.style.color = "#ff7846";
+  btn2.style.color = "#fff";
+  content1.style.transitionDelay = ".3s"
+  content2.style.transitionDelay = "0s"
+}
+
+function openEducations(){
+  content1.style.transform = "translateX(1000%)";
+  content2.style.transform = "translateX(0px)";
+  btn1.style.color = "#fff";
+  btn2.style.color = "#ff7846";
+  content1.style.transitionDelay = "0s"
+  content2.style.transitionDelay = ".3s"
+}
+</script>
 
 <script src="/js/tablinks.js"></script>
 
@@ -185,7 +288,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
 <script>
-  const navE1 = document.querySelector('.navbar');
+  const navE1 = document.querySelector('.header-style');
 
   window.addEventListener('scroll', () => {
     if (window.scrollY >= 56) {
@@ -194,6 +297,14 @@
       navE1.classList.remove('navbar-scrolled')
     }
   });
+</script>
+
+<script>
+  const updateProgressBar = (progressBar, value) => {
+    value = Math.round(value);
+    progressBar.querySelector(".progress__fill").style.width = `${value}%`;
+    progressBar.querySelector(".progress__text").textContent = `${value}%`;
+  }
 </script>
 
 </body>

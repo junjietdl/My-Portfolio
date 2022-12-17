@@ -1,0 +1,102 @@
+/* nav */
+
+.header-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  transition: all .5s;
+  height: 60px;
+}
+
+.navbar {
+  transition: all .5s;
+}
+
+.navbar-scrolled {
+  background-color: rgba(19,19,24,0.95);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1;
+  padding: 10px;
+  background: transparent;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 10px 50px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: .5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav .fa-solid {
+  display: none;
+}
+
+/* css for small screen */
+
+@media only screen and (max-width: 714px) {
+
+  /* Nav bar */
+
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    background: #131318;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+}

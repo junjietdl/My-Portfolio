@@ -1,0 +1,70 @@
+/* Skill progress */
+
+.progress {
+  position: relative;
+  width: 40rem;
+  height: 1rem;
+  background-color: #ccc;
+  border-radius: 5px;
+  max-width: calc(100% - 40px);
+  overflow: hidden;
+}
+
+.skill-title {
+  padding: 5px 0;
+}
+
+.progress__fill {
+  width: 0%;
+  height: 100%;
+  background-color: greenyellow;
+  transition: all .5s;
+}
+
+.progress__text {
+  position: absolute;
+  top: 50%;
+  right: 45%;
+  transform: translateY(-50%);
+  font: bold 14px 'Quicksand', sans-serif;
+  color: black;
+}
+
+.progress-container {
+  padding: 10px;
+}
+
+.progress-container img {
+  width: 100px;
+  height: 100%;
+}
+
+@media(max-width: 1270px) {
+  .progress {
+    width: 30rem;
+  }
+}
+
+@media(max-width: 937px) {
+  .progress {
+    width: 20rem;
+  }
+}
+
+@media(max-width: 714px) {
+  .progress {
+    width: 35rem;
+  }
+}
+
+@media(max-width: 661px) {
+  .progress {
+    width: 25rem;
+  }
+}
+
+@media(max-width: 462px) {
+  .progress {
+    width: 20rem;
+  }
+}
