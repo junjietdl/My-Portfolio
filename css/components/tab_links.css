@@ -3,6 +3,7 @@
   height: 50rem;
   position: relative;
   overflow: hidden;
+  margin-top: 5%;
 }
 
 
@@ -44,4 +45,8 @@
 
 #btn-skills {
   color: #ff7846;
+}
+
+.tabcontent ul li h2 {
+  color: #03dac6;
 }

@@ -24,6 +24,11 @@
   flex-basis: 60%;
 }
 
+.description {
+  font-size: 25px;
+  color: #fff;
+}
+
 .sub-title {
   font-size: 60px;
   font-weight: 600;
@@ -37,7 +42,7 @@
 }
 
 .tabcontent li span{
-  color: #ff004f;
+  color: #678983;
 }
 
 /* css for small screen */
